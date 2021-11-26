@@ -42,11 +42,13 @@ const quotes = [
   },
   {
       author: 'Frank Zappa',
-      quote: 'A mind is like a parachute. It doesn’t work if it isn’t open.'
+      quote: 'A mind is like a parachute. It doesn’t work if it isn’t open.',
+      year: '1974'
   },
   {
       author: 'Ella Fitzgerald',
-      quote: 'It isn’t where you came from. It’s where you’re going that counts.'
+      quote: 'It isn’t where you came from. It’s where you’re going that counts.',
+      citation: 'Jazz Quarterly'
   }
 ]
 
@@ -62,7 +64,7 @@ function getRandomQuote(top) {
 
 /***
  * `printQuote` function
- * this will check for the optional citation and year properties (none of my quotes happen to use them).
+ * this will check for the optional citation and year properties.
  * If they exist, span elements will be created for their values.
 ***/
 function printQuote() {
