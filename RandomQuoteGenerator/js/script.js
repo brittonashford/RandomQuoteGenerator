@@ -52,6 +52,9 @@ const quotes = [
   }
 ]
 
+
+const colors = ['blue', 'green', 'red', 'purple', 'orange'];
+
 /***
  * `getRandomQuote` function
  * pass in quotes.length for the top parameter to set the upper limit
@@ -59,6 +62,15 @@ const quotes = [
 function getRandomQuote(top) {
   let pos = Math.floor(Math.random() * top);
   return quotes[pos];
+}
+
+/***
+ * `getRandomQuote` function
+ * pass in colors.length for the top parameter to set the upper limit
+***/
+function getRandomColor(top) {
+    let pos = Math.floor(Math.random() * top);
+    return colors[pos];
 }
 
 
@@ -78,6 +90,7 @@ function printQuote() {
     }
     html += '</p>'
     document.getElementById('quote-box').innerHTML = html;
+    document.body.style.backgroundColor = `${getRandomColor(colors.length)}`;
 }
 
 /***
